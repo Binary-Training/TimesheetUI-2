@@ -38,7 +38,6 @@ export default function data() {
   return {
     columns: [
       { Header: "Resource Name", accessor: "Resource_Name", align: "center" },
-      { Header: "Time Periods", accessor: "Time_Periods", align: "center" },
       { Header: "Approved Hour(s)", accessor: "Approved_Hour", align: "center" },
       { Header: "Rejected Hours", accessor: "Rejected_Hours", align: "center" },
       { Header: "Regular Submitted Hour(s)", accessor: "Regular_Submitted_Hour", align: "center" },
@@ -55,11 +54,6 @@ export default function data() {
     rows: [
       {
         Resource_Name: <Project name="Feb4 User5" />,
-        Time_Periods: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            27/03/22-02/04/22
-          </MDTypography>
-        ),
         Approved_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             0.0
@@ -90,11 +84,6 @@ export default function data() {
       },
       {
         Resource_Name: <Project name="Feb4 User5" />,
-        Time_Periods: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            27/03/22-02/04/22
-          </MDTypography>
-        ),
         Approved_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             0.0
@@ -125,11 +114,6 @@ export default function data() {
       },
       {
         Resource_Name: <Project name="Feb4 User5" />,
-        Time_Periods: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            27/03/22-02/04/22
-          </MDTypography>
-        ),
         Approved_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             0.0
@@ -160,11 +144,6 @@ export default function data() {
       },
       {
         Resource_Name: <Project name="Feb4 User5" />,
-        Time_Periods: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            27/03/22-02/04/22
-          </MDTypography>
-        ),
         Approved_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             0.0
