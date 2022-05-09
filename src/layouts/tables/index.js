@@ -23,13 +23,15 @@ import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 import MDPagination from "components/MDPagination";
+import MDInput from "components/MDInput";
+import Select from "components/Select";
 
 // Material Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 // import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
-import BasicDatePicker from "examples/BasicDatePicker";
+// import BaiscDatePicker from "examples/Date";
 
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
@@ -60,8 +62,28 @@ function Tables() {
               >
                 <MDTypography variant="h6" color="white">
                   Approve By Project
-                  <BasicDatePicker />
                 </MDTypography>
+              </MDBox>
+              <MDBox
+                py={1}
+                px={2}
+                display="flex"
+                flexDirection={{ xs: "row" }}
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                {/* <BaiscDatePicker /> */}
+                <Select />
+              </MDBox>
+              <MDBox
+                px={2}
+                display="flex"
+                flexDirection={{ xs: "row" }}
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <Select />
+                <MDInput label="Search here..." />
               </MDBox>
               <MDBox pt={3}>
                 <DataTable
@@ -72,6 +94,7 @@ function Tables() {
                   noEndBorder
                 />
               </MDBox>
+
               <MDBox
                 py={1}
                 px={2}
