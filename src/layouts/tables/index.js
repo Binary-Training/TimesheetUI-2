@@ -24,14 +24,15 @@ import MDTypography from "components/MDTypography";
 import MDButton from "components/MDButton";
 import MDPagination from "components/MDPagination";
 import MDInput from "components/MDInput";
-import Select from "components/Select";
+import SelectTextFields from "components/Select";
+// import Breadcrumbs from "examples/Breadcrumbs";
 
 // Material Dashboard 2 React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 // import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
-// import BaiscDatePicker from "examples/Date";
+import MaterialUIPickers from "examples/Date";
 
 // Data
 import authorsTableData from "layouts/tables/data/authorsTableData";
@@ -39,6 +40,43 @@ import projectsTableData from "layouts/tables/data/projectsTableData";
 import weeksTableData from "layouts/tables/data/weeksTableData";
 
 function Tables() {
+  const page = [
+    {
+      value: "Pending",
+      label: "Pending",
+    },
+    {
+      value: "Resolve",
+      label: "Resolve",
+    },
+    {
+      value: "Reject",
+      label: "Reject",
+    },
+    {
+      value: "Fullfilled",
+      label: "Fullfilled",
+    },
+  ];
+  const page1 = [
+    {
+      value: 5,
+      label: 5,
+    },
+    {
+      value: 10,
+      label: 10,
+    },
+    {
+      value: 20,
+      label: 20,
+    },
+    {
+      value: "All",
+      label: "All",
+    },
+  ];
+
   const { columns, rows } = authorsTableData();
   const { columns: pColumns, rows: pRows } = projectsTableData();
   const { columns: wColumns, rows: wRows } = weeksTableData();
@@ -72,8 +110,8 @@ function Tables() {
                 justifyContent="space-between"
                 alignItems="center"
               >
-                {/* <BaiscDatePicker /> */}
-                <Select />
+                <MaterialUIPickers />
+                <SelectTextFields data={page} />
               </MDBox>
               <MDBox
                 px={2}
@@ -82,8 +120,8 @@ function Tables() {
                 justifyContent="space-between"
                 alignItems="center"
               >
-                <Select />
-                <MDInput label="Search here..." />
+                <SelectTextFields data={page1} />
+                <MDInput label="Search here..." size="small" />
               </MDBox>
               <MDBox pt={3}>
                 <DataTable
@@ -151,6 +189,27 @@ function Tables() {
                   Approve By Project
                 </MDTypography>
               </MDBox>
+              <MDBox
+                py={1}
+                px={2}
+                display="flex"
+                flexDirection={{ xs: "row" }}
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <MaterialUIPickers />
+                <SelectTextFields data={page} />
+              </MDBox>
+              <MDBox
+                px={2}
+                display="flex"
+                flexDirection={{ xs: "row" }}
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <SelectTextFields data={page1} />
+                <MDInput label="Search here..." size="small" />
+              </MDBox>
               <MDBox pt={3}>
                 <DataTable
                   table={{ columns: pColumns, rows: pRows }}
@@ -212,6 +271,27 @@ function Tables() {
                   Approve By Project
                 </MDTypography>
               </MDBox>
+              <MDBox
+                py={1}
+                px={2}
+                display="flex"
+                flexDirection={{ xs: "row" }}
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <MaterialUIPickers />
+                <SelectTextFields data={page} />
+              </MDBox>
+              <MDBox
+                px={2}
+                display="flex"
+                flexDirection={{ xs: "row" }}
+                justifyContent="space-between"
+                alignItems="center"
+              >
+                <SelectTextFields data={page1} />
+                <MDInput label="Search here..." size="small" />
+              </MDBox>
               <MDBox pt={3}>
                 <DataTable
                   table={{ columns: wColumns, rows: wRows }}
@@ -221,6 +301,7 @@ function Tables() {
                   noEndBorder
                 />
               </MDBox>
+
               <MDBox
                 py={1}
                 mx={2}

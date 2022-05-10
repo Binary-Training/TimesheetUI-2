@@ -2,26 +2,7 @@ import * as React from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 
-const page = [
-  {
-    value: 5,
-    label: "Five",
-  },
-  {
-    value: "10",
-    label: "Ten",
-  },
-  {
-    value: "20",
-    label: "Twenty",
-  },
-  {
-    value: "All",
-    label: "All",
-  },
-];
-
-export default function SelectTextFields() {
+export default function SelectTextFields(props) {
   const [task, setTask] = React.useState("Other");
 
   const handleChange = (event) => {
@@ -32,7 +13,7 @@ export default function SelectTextFields() {
     <Box
       component="form"
       sx={{
-        "& .MuiTextField-root": { width: 182 },
+        "& .MuiTextField-root": { width: 159 },
       }}
       noValidate
       autoComplete="off"
@@ -41,13 +22,14 @@ export default function SelectTextFields() {
         <TextField
           id="outlined-select-currency-native"
           select
+          size="small"
           value={task}
           onChange={handleChange}
           SelectProps={{
             native: true,
           }}
         >
-          {page.map((option) => (
+          {props.data.map((option) => (
             <option key={option.value} value={option.value}>
               {option.label}
             </option>

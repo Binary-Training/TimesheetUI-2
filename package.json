@@ -13,6 +13,7 @@
     "@mui/material": "^5.6.4",
     "@mui/styled-engine": "5.4.1",
     "@mui/styled-engine-sc": "^5.6.1",
+    "@mui/x-date-pickers": "^5.0.0-alpha.2",
     "@testing-library/jest-dom": "5.16.2",
     "@testing-library/react": "12.1.2",
     "@testing-library/user-event": "13.5.0",
@@ -25,6 +26,7 @@
     "react-github-btn": "1.2.1",
     "react-router-dom": "6.2.1",
     "react-scripts": "5.0.0",
+    "react-swipeable-views": "^0.14.0",
     "react-table": "7.7.0",
     "styled-components": "^5.3.5",
     "stylis": "4.0.13",
@@ -40,10 +42,7 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": []
   },
   "browserslist": {
     "production": [
@@ -56,16 +55,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "eslint": "8.8.0",
-    "eslint-config-airbnb": "19.0.4",
-    "eslint-config-prettier": "8.3.0",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-prettier": "4.0.0",
-    "eslint-plugin-react": "7.28.0",
-    "eslint-plugin-react-hooks": "4.3.0",
-    "prettier": "2.5.1"
   }
 }
