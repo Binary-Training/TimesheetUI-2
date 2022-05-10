@@ -43,10 +43,8 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "Project Name", accessor: "Project_Name", align: "center" },
-      { Header: "Project Manager Name", accessor: "Project_Manager_Name", align: "center" },
-      { Header: "Project Country", accessor: "Project_Country", align: "center" },
-      { Header: "Project Description", accessor: "Project_Description", align: "center" },
+      { Header: "Resource Name", accessor: "Resource_Name", align: "center" },
+      { Header: "Resource Country Name", accessor: "Resource_Country_Name", align: "center" },
       { Header: "Approved Hour(s)", accessor: "Approved_Hour", align: "center" },
       { Header: "Rejected Hour(s)", accessor: "Rejected_Hour", align: "center" },
       { Header: "Regular Submitted Hour(s)", accessor: "Regular_Submitted_Hour", align: "center" },
@@ -62,67 +60,47 @@ export default function data() {
 
     rows: [
       {
-        Project_Name: <Author name="3MRCR-301012" />,
-        Project_Manager_Name: <Job title="Feb5 Pm1" />,
-        Project_Country: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            LATAM2014
-          </MDTypography>
-        ),
-        Project_Description: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            Sep02Proj13
-          </MDTypography>
-        ),
+        Resource_Name: <Author name="Feb4 User4" />,
+        Resource_Country_Name: <Job title="LATAM2014" />,
         Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Rejected_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Regular_Submitted_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             0.0
           </MDTypography>
         ),
+        Rejected_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            0.0
+          </MDTypography>
+        ),
+        Regular_Submitted_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            16.0
+          </MDTypography>
+        ),
         Overtime_Submitted_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            8.0
           </MDTypography>
         ),
         Not_Submitted_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Approve_All: <Checkbox {...label} size="small" />,
         Reject_All: <Checkbox {...label} size="small" />,
       },
       {
-        Project_Name: <Author name="3MRCR-301012" />,
-        Project_Manager_Name: <Job title="Feb5 Pm1" />,
-        Project_Country: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            LATAM2014
-          </MDTypography>
-        ),
-        Project_Description: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            Sep02Proj13
-          </MDTypography>
-        ),
+        Resource_Name: <Author name="Feb4 User2" />,
+        Resource_Country_Name: <Job title="LATAM2014" />,
         Approved_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Rejected_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Regular_Submitted_Hour: (
@@ -132,38 +110,28 @@ export default function data() {
         ),
         Overtime_Submitted_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Not_Submitted_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Approve_All: <Checkbox {...label} size="small" />,
         Reject_All: <Checkbox {...label} size="small" />,
       },
       {
-        Project_Name: <Author name="3MRCR-301012" />,
-        Project_Manager_Name: <Job title="Feb5 Pm1" />,
-        Project_Country: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            LATAM2014
-          </MDTypography>
-        ),
-        Project_Description: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            Sep02Proj13
-          </MDTypography>
-        ),
+        Resource_Name: <Author name="Feb4 User3" />,
+        Resource_Country_Name: <Job title="LATAM2014" />,
         Approved_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Rejected_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Regular_Submitted_Hour: (
@@ -173,38 +141,28 @@ export default function data() {
         ),
         Overtime_Submitted_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Not_Submitted_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Approve_All: <Checkbox {...label} size="small" />,
         Reject_All: <Checkbox {...label} size="small" />,
       },
       {
-        Project_Name: <Author name="3MRCR-301012" />,
-        Project_Manager_Name: <Job title="Feb5 Pm1" />,
-        Project_Country: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            LATAM2014
-          </MDTypography>
-        ),
-        Project_Description: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            Sep02Proj13
-          </MDTypography>
-        ),
+        Resource_Name: <Author name="Feb4 User4" />,
+        Resource_Country_Name: <Job title="LATAM2014" />,
         Approved_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Rejected_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Regular_Submitted_Hour: (
@@ -214,12 +172,43 @@ export default function data() {
         ),
         Overtime_Submitted_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
           </MDTypography>
         ),
         Not_Submitted_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+            0.0
+          </MDTypography>
+        ),
+        Approve_All: <Checkbox {...label} size="small" />,
+        Reject_All: <Checkbox {...label} size="small" />,
+      },
+      {
+        Resource_Name: <Author name="Mar27 User" />,
+        Resource_Country_Name: <Job title="LATAM2014" />,
+        Approved_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            0.0
+          </MDTypography>
+        ),
+        Rejected_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            0.0
+          </MDTypography>
+        ),
+        Regular_Submitted_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            0.0
+          </MDTypography>
+        ),
+        Overtime_Submitted_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            0.0
+          </MDTypography>
+        ),
+        Not_Submitted_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            0.0
           </MDTypography>
         ),
         Approve_All: <Checkbox {...label} size="small" />,

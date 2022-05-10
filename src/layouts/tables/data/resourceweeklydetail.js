@@ -38,8 +38,9 @@ export default function data() {
   return {
     columns: [
       { Header: "Resource Name", accessor: "Resource_Name", align: "center" },
+      { Header: "Time Period(s)", accessor: "Time_Period", align: "center" },
       { Header: "Approved Hour(s)", accessor: "Approved_Hour", align: "center" },
-      { Header: "Rejected Hours", accessor: "Rejected_Hours", align: "center" },
+      { Header: "Rejected Hour(s)", accessor: "Rejected_Hour", align: "center" },
       { Header: "Regular Submitted Hour(s)", accessor: "Regular_Submitted_Hour", align: "center" },
       {
         Header: "Overtime Submitted Hour(s)",
@@ -54,12 +55,52 @@ export default function data() {
     rows: [
       {
         Resource_Name: <Project name="Feb4 User5" />,
+        Time_Period: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            27/03/2022-02/04/2022
+          </MDTypography>
+        ),
         Approved_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             0.0
           </MDTypography>
         ),
-        Rejected_Hours: (
+        Rejected_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            0.0
+          </MDTypography>
+        ),
+        Regular_Submitted_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            8.0
+          </MDTypography>
+        ),
+        Overtime_Submitted_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            8.0
+          </MDTypography>
+        ),
+        Not_Submitted_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            0.0
+          </MDTypography>
+        ),
+        Approve_All: <Checkbox {...label} size="small" />,
+        Reject_All: <Checkbox {...label} size="small" />,
+      },
+      {
+        Resource_Name: <Project name="Feb4 User5" />,
+        Time_Period: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            20/03/2022-26/03/2022
+          </MDTypography>
+        ),
+        Approved_Hour: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            0.0
+          </MDTypography>
+        ),
+        Rejected_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             0.0
           </MDTypography>
@@ -84,72 +125,17 @@ export default function data() {
       },
       {
         Resource_Name: <Project name="Feb4 User5" />,
+        Time_Period: (
+          <MDTypography variant="caption" color="text" fontWeight="medium">
+            03/04/2022-09/04/2022
+          </MDTypography>
+        ),
         Approved_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             0.0
           </MDTypography>
         ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
-      },
-      {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
-      },
-      {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Rejected_Hours: (
+        Rejected_Hour: (
           <MDTypography variant="caption" color="text" fontWeight="medium">
             0.0
           </MDTypography>

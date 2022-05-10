@@ -35,9 +35,9 @@ import DataTable from "examples/Tables/DataTable";
 import MaterialUIPickers from "examples/Date";
 
 // Data
-import authorsTableData from "layouts/tables/data/authorsTableData";
-import projectsTableData from "layouts/tables/data/projectsTableData";
-import weeksTableData from "layouts/tables/data/weeksTableData";
+import approvebyresource from "layouts/tables/data/approvebyresource";
+import resourcedtail from "layouts/tables/data/resourcedetail";
+import resourceweeklydetail from "layouts/tables/data/resourceweeklydetail";
 
 function Tables() {
   const page = [
@@ -77,9 +77,9 @@ function Tables() {
     },
   ];
 
-  const { columns, rows } = authorsTableData();
-  const { columns: pColumns, rows: pRows } = projectsTableData();
-  const { columns: wColumns, rows: wRows } = weeksTableData();
+  const { columns, rows } = approvebyresource();
+  const { columns: pColumns, rows: pRows } = resourcedtail();
+  const { columns: wColumns, rows: wRows } = resourceweeklydetail();
 
   return (
     <DashboardLayout>
@@ -99,7 +99,7 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Approve By Project
+                  Approve By Resource
                 </MDTypography>
               </MDBox>
               <MDBox
@@ -186,7 +186,7 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Approve By Project
+                  Resource Detail
                 </MDTypography>
               </MDBox>
               <MDBox
@@ -268,7 +268,7 @@ function Tables() {
                 coloredShadow="info"
               >
                 <MDTypography variant="h6" color="white">
-                  Approve By Project
+                  Resource Weekly Detail
                 </MDTypography>
               </MDBox>
               <MDBox
