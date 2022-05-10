@@ -18,13 +18,20 @@ Coded by www.creative-tim.com
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import Checkbox from "@mui/material/Checkbox";
+import MDAvatar from "components/MDAvatar";
+import MDInput from "components/MDInput";
+import { Checkbox } from "@mui/material";
 
 const label = { inputProps: { "aria-label": "Checkbox demo" } };
+// import { Icon } from "@mui/material";
+// import MDPagination from "components/MDPagination";
+// import checkbox from "assets/theme-dark/components/form/checkbox";
+// Images
 
 export default function data() {
   const Author = ({ name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
+      <MDAvatar name={name} size="sm" />
       <MDBox ml={2} lineHeight={1}>
         <MDTypography display="block" variant="button" fontWeight="medium">
           {name}
@@ -33,197 +40,165 @@ export default function data() {
     </MDBox>
   );
 
-  const Job = ({ title }) => (
+  const Job = ({ title, description }) => (
     <MDBox lineHeight={1} textAlign="left">
       <MDTypography display="block" variant="caption" color="text" fontWeight="medium">
         {title}
       </MDTypography>
+      <MDTypography variant="caption">{description}</MDTypography>
     </MDBox>
   );
 
   return {
     columns: [
-      { Header: "Project Name", accessor: "Project_Name", align: "center" },
-      { Header: "Project Manager Name", accessor: "Project_Manager_Name", align: "center" },
-      { Header: "Project Country", accessor: "Project_Country", align: "center" },
-      { Header: "Project Description", accessor: "Project_Description", align: "center" },
-      { Header: "Approved Hour(s)", accessor: "Approved_Hour", align: "center" },
-      { Header: "Rejected Hour(s)", accessor: "Rejected_Hour", align: "center" },
-      { Header: "Regular Submitted Hour(s)", accessor: "Regular_Submitted_Hour", align: "center" },
-      {
-        Header: "Overtime Submitted Hour(s)",
-        accessor: "Overtime_Submitted_Hour",
-        align: "center",
-      },
-      { Header: "Not Submitted Hour(s)", accessor: "Not_Submitted_Hour", align: "center" },
-      { Header: "Approve All", accessor: "Approve_All", align: "center" },
-      { Header: "Reject All", accessor: "Reject_All", align: "center" },
+      { Header: "Resource Name", accessor: "author", width: "15%", align: "center" },
+      { Header: "Timesheet period", accessor: "function", align: "center" },
+      { Header: "Regular Hours", accessor: "status", align: "center" },
+      { Header: "Overtime Hours", accessor: "employed", align: "center" },
+      { Header: "Approved All", accessor: "action", align: "center" },
+      { Header: "Reject All", accessor: "defeat", align: "center" },
     ],
 
     rows: [
       {
-        Project_Name: <Author name="3MRCR-301012" />,
-        Project_Manager_Name: <Job title="Feb5 Pm1" />,
-        Project_Country: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            LATAM2014
+        author: <Author name="Feb4 User2" />,
+        function: <Job description="01/05/2022-07/05/2022" />,
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            15.00
           </MDTypography>
         ),
-        Project_Description: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            Sep02Proj13
-          </MDTypography>
-        ),
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Rejected_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
             0.0
           </MDTypography>
         ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
+        action: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
         ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
+        defeat: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
         ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
       },
       {
-        Project_Name: <Author name="3MRCR-301012" />,
-        Project_Manager_Name: <Job title="Feb5 Pm1" />,
-        Project_Country: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            LATAM2014
-          </MDTypography>
-        ),
-        Project_Description: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            Sep02Proj13
-          </MDTypography>
-        ),
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Rejected_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
+        author: <Author name="Feb4 User2" />,
+        function: <Job description="06/03/2022-12/03/2022" />,
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
             0.0
           </MDTypography>
         ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            8.00
           </MDTypography>
         ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
+        action: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
         ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
+        defeat: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
+        ),
       },
       {
-        Project_Name: <Author name="3MRCR-301012" />,
-        Project_Manager_Name: <Job title="Feb5 Pm1" />,
-        Project_Country: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            LATAM2014
+        author: <Author name="Feb4 User3" />,
+        function: <Job description="01/05/2022-07/05/2022" />,
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            10.00
           </MDTypography>
         ),
-        Project_Description: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            Sep02Proj13
-          </MDTypography>
-        ),
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Rejected_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
             0.0
           </MDTypography>
         ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
+        action: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
         ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
+        defeat: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
         ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
       },
       {
-        Project_Name: <Author name="3MRCR-301012" />,
-        Project_Manager_Name: <Job title="Feb5 Pm1" />,
-        Project_Country: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            LATAM2014
+        author: <Author name="Feb4 User3" />,
+        function: <Job description="06/03/2022-12/03/2022" />,
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            23.00
           </MDTypography>
         ),
-        Project_Description: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            Sep02Proj13
-          </MDTypography>
-        ),
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Rejected_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
-          </MDTypography>
-        ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
             0.0
           </MDTypography>
         ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+        action: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
+        ),
+        defeat: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
+        ),
+      },
+      {
+        author: <Author name="Feb4 User4" />,
+        function: <Job description="27/02/2022-05/03/2022" />,
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            23.00
           </MDTypography>
         ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.8
+        employed: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            0.0
           </MDTypography>
         ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
+        action: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
+        ),
+        defeat: (
+          <MDBox mb={2}>
+            <Checkbox {...label} size="small" />
+            <br />
+            <MDInput type="text" label="Add Comment" fullWidth />
+          </MDBox>
+        ),
       },
     ],
   };

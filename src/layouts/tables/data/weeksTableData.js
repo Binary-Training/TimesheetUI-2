@@ -15,162 +15,218 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-// @mui material components
-
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import Checkbox from "@mui/material/Checkbox";
-
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
-
+import MDAvatar from "components/MDAvatar";
+import MDInput from "components/MDInput";
+import { Icon } from "@mui/material";
+import MDPagination from "components/MDPagination";
 // Images
 
 export default function data() {
-  const Project = ({ name }) => (
+  const Week = ({ name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
-      <MDTypography display="block" variant="button" fontWeight="medium" ml={1} lineHeight={1}>
-        {name}
+      <MDAvatar name={name} size="sm" />
+      <MDBox ml={2} lineHeight={1}>
+        <MDTypography display="block" variant="button" fontWeight="medium">
+          {name}
+        </MDTypography>
+      </MDBox>
+    </MDBox>
+  );
+
+  const Job = ({ title, description }) => (
+    <MDBox lineHeight={1} textAlign="left">
+      <MDTypography display="block" variant="caption" color="text" fontWeight="medium">
+        {title}
       </MDTypography>
+      <MDTypography variant="caption">{description}</MDTypography>
     </MDBox>
   );
 
   return {
     columns: [
-      { Header: "Resource Name", accessor: "Resource_Name", align: "center" },
-      { Header: "Approved Hour(s)", accessor: "Approved_Hour", align: "center" },
-      { Header: "Rejected Hours", accessor: "Rejected_Hours", align: "center" },
-      { Header: "Regular Submitted Hour(s)", accessor: "Regular_Submitted_Hour", align: "center" },
-      {
-        Header: "Overtime Submitted Hour(s)",
-        accessor: "Overtime_Submitted_Hour",
-        align: "center",
-      },
-      { Header: "Not Submitted Hour(s)", accessor: "Not_Submitted_Hour", align: "center" },
-      { Header: "Approve All", accessor: "Approve_All", align: "center" },
-      { Header: "Reject All", accessor: "Reject_All", align: "center" },
+      { Header: "Project", accessor: "Week", width: "15%", align: "center" },
+      { Header: "Project Description", accessor: "Timesheet", align: "center" },
+      { Header: "Effort Type", accessor: "Regular", align: "center" },
+      { Header: "Sun/Mar/27", accessor: "Overtime", align: "center" },
+      { Header: "Mon/Mar/28", accessor: "Approved", align: "center" },
+      { Header: "Tue/Mar/29", accessor: "Reject", align: "center" },
+      { Header: "Wed/Mar/30", accessor: "levi", align: "center" },
+      { Header: "Thu/Mar/31", accessor: "sevi", align: "center" },
+      { Header: "Fri/Apr/01", accessor: "Revi", align: "center" },
+      { Header: "Sat/Apr/02", accessor: "devi", align: "center" },
+      { Header: "Approver", accessor: "pevi", align: "center" },
+      { Header: "Status", accessor: "kevi", align: "center" },
+      { Header: "Total", accessor: "mevi", align: "center" },
+      { Header: "Action", accessor: "nevi", align: "center" },
     ],
 
     rows: [
       {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        Week: <Week name="" />,
+        Timesheet: <Job description="" />,
+        Regular: <Job description="" />,
+        Overtime: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        Approved: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        Reject: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        levi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        sevi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
+        Revi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
+        ),
+        devi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
+        ),
+        pevi: <Job description="" />,
+        kevi: <Job description="" />,
+        mevi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
+        ),
+        nevi: (
+          <MDPagination item>
+            <Icon>restore_from_trash</Icon>
+          </MDPagination>
+        ),
       },
       {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
+        Week: <Week name="+Add Row" />,
+        Timesheet: <Job description="" />,
+        Regular: <Job description="" />,
+        Overtime: <Job description="" />,
+        Approved: <Job description="" />,
+        Reject: <Job description="" />,
+        levi: <Job description="" />,
+        sevi: <Job description="" />,
+        Revi: <Job description="" />,
+        devi: <Job description="" />,
+        pevi: <Job description="" />,
+        kevi: <Job description="" />,
+        mevi: <Job description="" />,
+        nevi: <Job description="" />,
       },
       {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        Week: <Week name="Regular Hours" />,
+        Timesheet: <Job description="" />,
+        Regular: <Job description="" />,
+        Overtime: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        Approved: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        Reject: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        levi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        sevi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
+        Revi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
+        ),
+        devi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
+        ),
+        pevi: <Job description="" />,
+        kevi: <Job description="" />,
+        mevi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
+        ),
+        nevi: <Job description="" />,
       },
       {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        Week: <Week name="Overtime Hours" />,
+        Timesheet: <Job description="" />,
+        Regular: <Job description="" />,
+        Overtime: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        Approved: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        Reject: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        levi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
+        sevi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
         ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
+        Revi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
+        ),
+        devi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
+        ),
+        pevi: <Job description="" />,
+        kevi: <Job description="" />,
+        mevi: (
+          <MDBox mb={2}>
+            <MDInput type="text" fullWidth />
+          </MDBox>
+        ),
+        nevi: <Job description="" />,
       },
     ],
   };

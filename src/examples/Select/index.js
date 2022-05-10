@@ -13,7 +13,7 @@ export default function SelectTextFields(props) {
     <Box
       component="form"
       sx={{
-        "& .MuiTextField-root": { width: 159 },
+        "& .MuiTextField-root": { width: 70 },
       }}
       noValidate
       autoComplete="off"

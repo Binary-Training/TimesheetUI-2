@@ -16,182 +16,166 @@ Coded by www.creative-tim.com
 */
 
 // @mui material components
+import Icon from "@mui/material/Icon";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
 import MDTypography from "components/MDTypography";
-import Checkbox from "@mui/material/Checkbox";
-
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
+import MDAvatar from "components/MDAvatar";
+import MDProgress from "components/MDProgress";
 
 // Images
+import LogoAsana from "assets/images/small-logos/logo-asana.svg";
+import logoGithub from "assets/images/small-logos/github.svg";
+import logoAtlassian from "assets/images/small-logos/logo-atlassian.svg";
+import logoSlack from "assets/images/small-logos/logo-slack.svg";
+import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
+import logoInvesion from "assets/images/small-logos/logo-invision.svg";
 
 export default function data() {
-  const Project = ({ name }) => (
+  const Project = ({ image, name }) => (
     <MDBox display="flex" alignItems="center" lineHeight={1}>
+      <MDAvatar src={image} name={name} size="sm" variant="rounded" />
       <MDTypography display="block" variant="button" fontWeight="medium" ml={1} lineHeight={1}>
         {name}
       </MDTypography>
     </MDBox>
   );
 
+  const Progress = ({ color, value }) => (
+    <MDBox display="flex" alignItems="center">
+      <MDTypography variant="caption" color="text" fontWeight="medium">
+        {value}%
+      </MDTypography>
+      <MDBox ml={0.5} width="9rem">
+        <MDProgress variant="gradient" color={color} value={value} />
+      </MDBox>
+    </MDBox>
+  );
+
   return {
     columns: [
-      { Header: "Resource Name", accessor: "Resource_Name", align: "center" },
-      { Header: "Time Periods", accessor: "Time_Periods", align: "center" },
-      { Header: "Approved Hour(s)", accessor: "Approved_Hour", align: "center" },
-      { Header: "Rejected Hours", accessor: "Rejected_Hours", align: "center" },
-      { Header: "Regular Submitted Hour(s)", accessor: "Regular_Submitted_Hour", align: "center" },
-      {
-        Header: "Overtime Submitted Hour(s)",
-        accessor: "Overtime_Submitted_Hour",
-        align: "center",
-      },
-      { Header: "Not Submitted Hour(s)", accessor: "Not_Submitted_Hour", align: "center" },
-      { Header: "Approve All", accessor: "Approve_All", align: "center" },
-      { Header: "Reject All", accessor: "Reject_All", align: "center" },
+      { Header: "project", accessor: "project", width: "30%", align: "left" },
+      { Header: "budget", accessor: "budget", align: "left" },
+      { Header: "status", accessor: "status", align: "center" },
+      { Header: "completion", accessor: "completion", align: "center" },
+      { Header: "action", accessor: "action", align: "center" },
     ],
 
     rows: [
       {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Time_Periods: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            27/03/22-02/04/22
+        project: <Project image={LogoAsana} name="Asana" />,
+        budget: (
+          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
+            $2,500
           </MDTypography>
         ),
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            working
           </MDTypography>
         ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        completion: <Progress color="info" value={60} />,
+        action: (
+          <MDTypography component="a" href="#" color="text">
+            <Icon>more_vert</Icon>
           </MDTypography>
         ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
       },
       {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Time_Periods: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            27/03/22-02/04/22
+        project: <Project image={logoGithub} name="Github" />,
+        budget: (
+          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
+            $5,000
           </MDTypography>
         ),
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            done
           </MDTypography>
         ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        completion: <Progress color="success" value={100} />,
+        action: (
+          <MDTypography component="a" href="#" color="text">
+            <Icon>more_vert</Icon>
           </MDTypography>
         ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
       },
       {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Time_Periods: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            27/03/22-02/04/22
+        project: <Project image={logoAtlassian} name="Atlassian" />,
+        budget: (
+          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
+            $3,400
           </MDTypography>
         ),
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            canceled
           </MDTypography>
         ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        completion: <Progress color="error" value={30} />,
+        action: (
+          <MDTypography component="a" href="#" color="text">
+            <Icon>more_vert</Icon>
           </MDTypography>
         ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
-          </MDTypography>
-        ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
       },
       {
-        Resource_Name: <Project name="Feb4 User5" />,
-        Time_Periods: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            27/03/22-02/04/22
+        project: <Project image={logoSpotify} name="Spotify" />,
+        budget: (
+          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
+            $14,000
           </MDTypography>
         ),
-        Approved_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            working
           </MDTypography>
         ),
-        Rejected_Hours: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        completion: <Progress color="info" value={80} />,
+        action: (
+          <MDTypography component="a" href="#" color="text">
+            <Icon>more_vert</Icon>
           </MDTypography>
         ),
-        Regular_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+      },
+      {
+        project: <Project image={logoSlack} name="Slack" />,
+        budget: (
+          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
+            $1,000
           </MDTypography>
         ),
-        Overtime_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            canceled
           </MDTypography>
         ),
-        Not_Submitted_Hour: (
-          <MDTypography variant="caption" color="text" fontWeight="medium">
-            0.0
+        completion: <Progress color="error" value={0} />,
+        action: (
+          <MDTypography component="a" href="#" color="text">
+            <Icon>more_vert</Icon>
           </MDTypography>
         ),
-        Approve_All: <Checkbox {...label} size="small" />,
-        Reject_All: <Checkbox {...label} size="small" />,
+      },
+      {
+        project: <Project image={logoInvesion} name="Invesion" />,
+        budget: (
+          <MDTypography component="a" href="#" variant="button" color="text" fontWeight="medium">
+            $2,300
+          </MDTypography>
+        ),
+        status: (
+          <MDTypography component="a" href="#" variant="caption" color="text" fontWeight="medium">
+            done
+          </MDTypography>
+        ),
+        completion: <Progress color="success" value={100} />,
+        action: (
+          <MDTypography component="a" href="#" color="text">
+            <Icon>more_vert</Icon>
+          </MDTypography>
+        ),
       },
     ],
   };
