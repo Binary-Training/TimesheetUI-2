@@ -70,49 +70,49 @@ export default function data() {
         Regular: <Job description="" />,
         Overtime: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         Approved: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         Reject: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         levi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         sevi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         Revi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         devi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         pevi: <Job description="" />,
         kevi: <Job description="" />,
         mevi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         nevi: (
           <MDPagination item>
-            <Icon>restore_from_trash</Icon>
+            <Icon color="primary">restore_from_trash</Icon>
           </MDPagination>
         ),
       },
@@ -138,44 +138,44 @@ export default function data() {
         Regular: <Job description="" />,
         Overtime: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         Approved: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         Reject: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         levi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         sevi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         Revi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         devi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         pevi: <Job description="" />,
         kevi: <Job description="" />,
         mevi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         nevi: <Job description="" />,
@@ -186,44 +186,44 @@ export default function data() {
         Regular: <Job description="" />,
         Overtime: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         Approved: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         Reject: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         levi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         sevi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         Revi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         devi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         pevi: <Job description="" />,
         kevi: <Job description="" />,
         mevi: (
           <MDBox mb={2}>
-            <MDInput type="text" fullWidth />
+            <MDInput type="text" size="small" fullWidth />
           </MDBox>
         ),
         nevi: <Job description="" />,

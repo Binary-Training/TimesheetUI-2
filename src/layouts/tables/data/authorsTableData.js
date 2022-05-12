@@ -51,7 +51,7 @@ export default function data() {
 
   return {
     columns: [
-      { Header: "Resource Name", accessor: "author", width: "15%", align: "center" },
+      { Header: "Resource Name", accessor: "author", align: "center" },
       { Header: "Timesheet period", accessor: "function", align: "center" },
       { Header: "Regular Hours", accessor: "status", align: "center" },
       { Header: "Overtime Hours", accessor: "employed", align: "center" },
@@ -77,14 +77,14 @@ export default function data() {
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
         defeat: (
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
       },
@@ -105,14 +105,14 @@ export default function data() {
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
         defeat: (
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
       },
@@ -133,14 +133,14 @@ export default function data() {
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
         defeat: (
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
       },
@@ -161,14 +161,14 @@ export default function data() {
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
         defeat: (
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
       },
@@ -189,14 +189,14 @@ export default function data() {
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
         defeat: (
           <MDBox mb={2}>
             <Checkbox {...label} size="small" />
             <br />
-            <MDInput type="text" label="Add Comment" fullWidth />
+            <MDInput type="text" label="Add Comment" size="small" fullWidth />
           </MDBox>
         ),
       },

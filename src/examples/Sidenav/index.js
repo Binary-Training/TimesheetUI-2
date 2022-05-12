@@ -12,6 +12,18 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+import React from "react";
+// import ListSubheader from "@mui/material/ListSubheader";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+import InboxIcon from "@mui/icons-material/MoveToInbox";
+// import DraftsIcon from "@mui/icons-material/Drafts";
+// import SendIcon from "@mui/icons-material/Send";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+// import StarBorder from "@mui/icons-material/StarBorder";
 
 import { useEffect } from "react";
 
@@ -50,6 +62,10 @@ import {
 function Sidenav({ color, brand, brandName, routes, ...rest }) {
   const [controller, dispatch] = useMaterialUIController();
   const { miniSidenav, transparentSidenav, whiteSidenav, darkMode } = controller;
+  const [open, setOpen] = React.useState(true);
+  const handleClick = () => {
+    setOpen(!open);
+  };
   const location = useLocation();
   const collapseName = location.pathname.replace("/", "");
 
@@ -84,7 +100,9 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   }, [dispatch, location]);
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
+
   const renderRoutes = routes.map(({ type, name, icon, title, noCollapse, key, href, route }) => {
+    console.log(routes, "routes");
     let returnValue;
     if (type === "collapse") {
       returnValue = href ? (
@@ -106,6 +124,82 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
         <NavLink key={key} to={route}>
           <SidenavCollapse name={name} icon={icon} active={key === collapseName} />
         </NavLink>
+      );
+    } else if (type === "collapseDouble") {
+      returnValue = (
+        <List sx={{ width: "100%", maxWidth: 300, marginRight: "20px" }} component="nav">
+          <ListItemButton onClick={handleClick}>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Tables" primaryTypographyProps={{
+              color: "#f8f9fa",
+              fontWeight: "small",
+              variant: "body2",
+            }} />
+            {open ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <NavLink key="abc1" to="/table1">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <MDTypography sx={{ fontSize: 15 }} color="white">
+                      T1
+                    </MDTypography>
+                  </ListItemIcon>
+                  <ListItemText primary="ApproveByReject"
+                    primaryTypographyProps={{
+                      color: "#f8f9fa",
+                      fontWeight: "small",
+                      variant: "body2",
+                    }} />
+                </ListItemButton>
+              </NavLink>
+            </List>
+          </Collapse>
+
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <NavLink key="abc2" to="/table2">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <MDTypography sx={{ fontSize: 15 }} color="white">
+                      T2
+                    </MDTypography>
+                  </ListItemIcon>
+                  <ListItemText
+                    primary="RegisterTimesheet"
+                    primaryTypographyProps={{
+                      color: "#f8f9fa",
+                      fontWeight: "small",
+                      variant: "body2",
+                    }}
+                  />
+                </ListItemButton>
+              </NavLink>
+            </List>
+          </Collapse>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <NavLink key="abc3" to="/table3">
+                <ListItemButton sx={{ pl: 4 }}>
+                  <ListItemIcon>
+                    <MDTypography sx={{ fontSize: 15 }} color="white">
+                      T3
+                    </MDTypography>
+                  </ListItemIcon>
+                  <ListItemText primary="TimesheetDetail"
+                    primaryTypographyProps={{
+                      color: "#f8f9fa",
+                      fontWeight: "small",
+                      variant: "body2",
+                    }} />
+                </ListItemButton>
+              </NavLink>
+            </List>
+          </Collapse>
+        </List>
       );
     } else if (type === "title") {
       returnValue = (
