@@ -12,6 +12,20 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+import React from "react";
+// import ListSubheader from "@mui/material/ListSubheader";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import Collapse from "@mui/material/Collapse";
+// import InboxIcon from "@mui/icons-material/MoveToInbox";
+import TableViewIcon from "@mui/icons-material/TableView";
+// import DraftsIcon from "@mui/icons-material/Drafts";
+// import SendIcon from "@mui/icons-material/Send";
+import ExpandLess from "@mui/icons-material/ExpandLess";
+import ExpandMore from "@mui/icons-material/ExpandMore";
+import MDTypography from "components/MDTypography";
+// import StarBorder from "@mui/icons-material/StarBorder";
 
 import { useEffect } from "react";
 
@@ -29,7 +43,6 @@ import Icon from "@mui/material/Icon";
 
 // Material Dashboard 2 React components
 import MDBox from "components/MDBox";
-import MDTypography from "components/MDTypography";
 // import MDButton from "components/MDButton";
 
 // Material Dashboard 2 React example components
@@ -38,6 +51,8 @@ import SidenavCollapse from "examples/Sidenav/SidenavCollapse";
 // Custom styles for the Sidenav
 import SidenavRoot from "examples/Sidenav/SidenavRoot";
 import sidenavLogoLabel from "examples/Sidenav/styles/sidenav";
+
+import "./style.css";
 
 // Material Dashboard 2 React context
 import {
@@ -50,6 +65,10 @@ import {
 function Sidenav({ color, brand, brandName, routes, ...rest }) {
   const [controller, dispatch] = useMaterialUIController();
   const { miniSidenav, transparentSidenav, whiteSidenav, darkMode } = controller;
+  const [open, setOpen] = React.useState(true);
+  const handleClick = () => {
+    setOpen(!open);
+  };
   const location = useLocation();
   const collapseName = location.pathname.replace("/", "");
 
@@ -84,6 +103,7 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
   }, [dispatch, location]);
 
   // Render all the routes from the routes.js (All the visible items on the Sidenav)
+
   const renderRoutes = routes.map(({ type, name, icon, title, noCollapse, key, href, route }) => {
     let returnValue;
     if (type === "collapse") {
@@ -106,6 +126,124 @@ function Sidenav({ color, brand, brandName, routes, ...rest }) {
         <NavLink key={key} to={route}>
           <SidenavCollapse name={name} icon={icon} active={key === collapseName} />
         </NavLink>
+      );
+    } else if (type === "collapseDouble") {
+      returnValue = (
+        <List component="nav">
+          <ListItemButton onClick={handleClick} className="example" backgroundColor="primary">
+            <ListItemIcon className="example-icon">
+              <TableViewIcon color="white" />
+            </ListItemIcon>
+            <ListItemText
+              primary={
+                <MDTypography
+                  component="h6"
+                  variant="button"
+                  fontWeight="light"
+                  color={textColor}
+                  className="example-text"
+                >
+                  Tables
+                </MDTypography>
+              }
+            />
+            {open ? <ExpandLess color="white" /> : <ExpandMore color="white" />}
+          </ListItemButton>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <NavLink key="abc1" to="/table1">
+                <ListItemButton className="example">
+                  <ListItemIcon className="example-icon">
+                    <MDTypography
+                      component="h6"
+                      variant="button"
+                      fontWeight="light"
+                      color={textColor}
+                    >
+                      T1
+                    </MDTypography>
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <MDTypography
+                        component="h6"
+                        variant="button"
+                        fontWeight="light"
+                        color={textColor}
+                        className="example-text"
+                      >
+                        Table 1
+                      </MDTypography>
+                    }
+                  />
+                </ListItemButton>
+              </NavLink>
+            </List>
+          </Collapse>
+
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <NavLink key="abc2" to="/table2">
+                <ListItemButton className="example">
+                  <ListItemIcon className="example-icon">
+                    <MDTypography
+                      component="h6"
+                      variant="button"
+                      fontWeight="light"
+                      color={textColor}
+                    >
+                      T2
+                    </MDTypography>
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <MDTypography
+                        component="h6"
+                        variant="button"
+                        fontWeight="light"
+                        color={textColor}
+                        className="example-text"
+                      >
+                        Table 2
+                      </MDTypography>
+                    }
+                  />
+                </ListItemButton>
+              </NavLink>
+            </List>
+          </Collapse>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <NavLink key="abc3" to="/table3">
+                <ListItemButton className="example">
+                  <ListItemIcon className="example-icon">
+                    <MDTypography
+                      component="h6"
+                      variant="button"
+                      fontWeight="light"
+                      color={textColor}
+                    >
+                      T3
+                    </MDTypography>
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={
+                      <MDTypography
+                        component="h6"
+                        variant="button"
+                        fontWeight="light"
+                        color={textColor}
+                        className="example-text"
+                      >
+                        Table 3
+                      </MDTypography>
+                    }
+                  />
+                </ListItemButton>
+              </NavLink>
+            </List>
+          </Collapse>
+        </List>
       );
     } else if (type === "title") {
       returnValue = (
