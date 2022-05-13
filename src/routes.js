@@ -37,7 +37,9 @@ Coded by www.creative-tim.com
 
 // Material Dashboard 2 React layouts
 import Dashboard from "layouts/dashboard";
-import Tables from "layouts/tables";
+import Tables1 from "layouts/tables/Table1";
+import Tables2 from "layouts/tables/Table2";
+import Tables3 from "layouts/tables/Table3";
 // import Billing from "layouts/billing";
 import Notifications from "layouts/notifications";
 import Profile from "layouts/profile";
@@ -56,13 +58,45 @@ const routes = [
     route: "/dashboard",
     component: <Dashboard />,
   },
+  // {
+  //   type: "collapse",
+  //   name: "Tables",
+  //   key: "tables",
+  //   icon: <Icon fontSize="small">table_view</Icon>,
+  //   route: "/tables",
+  //   component: <Tables1 />,
+  // },
   {
-    type: "collapse",
-    name: "Tables",
-    key: "tables",
+    type: "collapseDouble",
+    name: "table2",
+    key: "table2",
+    icon: <Icon fontSize="small">login</Icon>,
+    route: "/authentication/sign-in",
+    component: <SignIn />,
+  },
+  {
+    type: "collapseNested",
+    name: "table1",
+    key: "table1",
     icon: <Icon fontSize="small">table_view</Icon>,
-    route: "/tables",
-    component: <Tables />,
+    route: "/table1",
+    component: <Tables1 />,
+  },
+  {
+    type: "collapseNested",
+    name: "table2",
+    key: "table2",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/table2",
+    component: <Tables2 />,
+  },
+  {
+    type: "collapseNested",
+    name: "table3",
+    key: "table3",
+    icon: <Icon fontSize="small">table_view</Icon>,
+    route: "/table3",
+    component: <Tables3 />,
   },
   // {
   //   type: "collapse",
@@ -96,6 +130,38 @@ const routes = [
     route: "/authentication/sign-in",
     component: <SignIn />,
   },
+  // {
+  //   type: "collapseDouble",
+  //   name: "table2",
+  //   key: "table2",
+  //   icon: <Icon fontSize="small">login</Icon>,
+  //   route: "/authentication/sign-in",
+  //   component: <SignIn />,
+  // },
+  // {
+  //   type: "collapseNested",
+  //   name: "table1",
+  //   key: "table1",
+  //   icon: <Icon fontSize="small">table_view</Icon>,
+  //   route: "/table1",
+  //   component: <Tables1 />,
+  // },
+  // {
+  //   type: "collapseNested",
+  //   name: "table2",
+  //   key: "table2",
+  //   icon: <Icon fontSize="small">table_view</Icon>,
+  //   route: "/table2",
+  //   component: <Tables2 />,
+  // },
+  // {
+  //   type: "collapseNested",
+  //   name: "table3",
+  //   key: "table3",
+  //   icon: <Icon fontSize="small">table_view</Icon>,
+  //   route: "/table3",
+  //   component: <Tables3 />,
+  // },
   // {
   //   type: "collapse",
   //   name: "Sign Up",
